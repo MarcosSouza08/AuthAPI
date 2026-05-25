@@ -43,7 +43,7 @@ public class JwtFilter extends OncePerRequestFilter {
 
             // SimpleGrantedAuthority é como o Spring Security entende roles
             var authority = new SimpleGrantedAuthority("ROLE_" + role);
-            //                                          ↑ prefixo obrigatório do Spring
+            //                                          prefixo obrigatório do Spring
 
             UsernamePasswordAuthenticationToken authentication =
                     new UsernamePasswordAuthenticationToken(email, null, List.of(authority));
